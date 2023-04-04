@@ -33,7 +33,7 @@ jobs:
       run: ./build/libraries/Tree/tests
 
     - name: Build ASAN
-      run: mkdir build_ASAN && cmake -S. -Bbuild_ASAN -DTESTS_BUILD_TYPE=ASAN -DCMAKE_BUILD_TYPE=Debug && cmake --build buildi_ASAN
+      run: mkdir build_ASAN && cmake -S. -Bbuild_ASAN -DTESTS_BUILD_TYPE=ASAN -DCMAKE_BUILD_TYPE=Debug && cmake --build build_ASAN
     - name: Run ASAN testsA
       timeout-minutes: 5
       run: ./build_ASAN/libraries/Tree/tests

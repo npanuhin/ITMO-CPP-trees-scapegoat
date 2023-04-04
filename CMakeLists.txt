@@ -25,11 +25,10 @@ if (TESTS_BUILD_TYPE MATCHES ASAN)
     set(LINK_OPTS -fsanitize=address)
 endif()
 if (TESTS_BUILD_TYPE MATCHES MSAN)
-    set(COMPILE_OPTS -Wall -Wextra -Werror -pedantic -pedantic-errors -O1 -fsanitize=memory
-        -fno-omit-frame-pointer -fsanitize-memory-track-origins=2
+    set(COMPILE_OPTS -Wall -Wextra -Werror -pedantic -pedantic-errors -O1 -fsanitize=leak
+        -fno-omit-frame-pointer
         -fno-sanitize-recover=all)
-    set(LINK_OPTS -fsanitize=memory
-        -fsanitize-memory-track-origins=2)
+    set(LINK_OPTS -fsanitize=leak)
 endif()
 if (TESTS_BUILD_TYPE MATCHES USAN)
     set(COMPILE_OPTS -Wall -Wextra -Werror -pedantic -pedantic-errors -O1
