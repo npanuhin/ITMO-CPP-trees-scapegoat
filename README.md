@@ -1,4 +1,7 @@
-# Scapegoat-дерево.
+<h1 align="center">C++: Scapegoat-дерево</h1>
+<h3 align="center">Лабораторная работа по курсу C++, ИТМО</h3>
+
+<!-- # Scapegoat-дерево. -->
 
 ## Деревья поиска
 
